@@ -28,12 +28,33 @@
       <div class="c_item"
            v-for="item in 8"
            :key="item">这是第{{item}}个元素</div>
-           <p class="c_item">哈哈哈  这是P元素</p>
+      <p class="c_item">哈哈哈 这是P元素</p>
     </div>
     <canvas id="mycanvas"
             width="200"
             height="200"></canvas>
+    <!-- display:inline-block -->
+    <div class="inline_block">
+      <div>1</div>
+      <div>1</div>
+    </div>
+    <ul>
+      <li>F</li>
+      <li>R</li>
+      <li>R</li>
+    </ul>
+    <!-- inline-height-->
+    <div class="inline-height">
+      <div class="text_inline_height">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或
+      </div>
+      <div class="text_inline_height font17">
+        哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或或或或或或或
+      </div>
+    </div>
+
   </div>
+
 </template>
 <script>
   export default {
@@ -69,17 +90,39 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
+  .text_inline_height {
+    width: 300px;
+    text-align: left;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .font17 {
+    font-size: 17px;
+  }
   .text {
     font-size: 1rem;
+  }
+  ul {
+    li {
+      background-color: blueviolet;
+    }
+  }
+  .inline_block {
+    display: inline-block;
+    div {
+      display: inline-block;
+      background-color: aquamarine;
+    }
   }
   .c_item {
     &:nth-child(2) {
       color: aqua;
     }
-    &:only-of-type{
+    &:only-of-type {
       color: brown;
     }
-    &:nth-last-child(2){
+    &:nth-last-child(2) {
       color: blueviolet;
     }
   }
