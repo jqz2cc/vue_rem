@@ -57,10 +57,12 @@
 
 </template>
 <script>
+  import mixin from './../mixin/mixin.js'
   export default {
     name: 'Home',
     components: {
     },
+    mixins: [mixin],
     data() {
       return {
         colorArr: ['antiquewhite', 'aquamarine', 'blueviolet', 'burlywood', 'chartreuse', 'cornflowerblue', 'darkcyan', 'darkseagreen', 'fuchsia']
@@ -98,10 +100,10 @@
     font-size: 16px;
   }
   .font17 {
-    font-size: 17px;
+    font-size: 15px;
   }
   .text {
-    font-size: 1rem;
+    font-size: 12px;
   }
   ul {
     li {

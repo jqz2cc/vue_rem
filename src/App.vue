@@ -8,16 +8,38 @@
 -->
 <template>
   <div id="app">
-    <router-view />
+    <keep-alive :max="5">
+      <!-- 需要缓存的视图组件 -->
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive" />
   </div>
 </template>
+<script>
+  export default {
+    created(){
+      // alert()
+    },
+    data(){
+      return {
+        keepAliveRouterArr:['about'],
+      }
+    },
+    beforeRouteUpdate(to,from,next){
+      alert(9)
+    },
+    methods:{
+
+    },
+  }
+</script>
 
 <style lang="less">
   html {
     font-size: 62.5%;
   }
   body {
-    font-size: 1.2rem;
+    font-size: 12px;
   }
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
